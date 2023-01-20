@@ -1,7 +1,15 @@
+import { Layout } from "@/components"
+import { ThemeProvider } from "@mui/material";
+import theme from "@/theme";
+
 export default function Home() {
   return (
-    <div>
-      hello world
-    </div>
+    <main>
+      <ThemeProvider theme={theme}>
+        <Layout>
+
+        </Layout>
+      </ThemeProvider>
+    </main>
   )
 }
