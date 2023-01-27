@@ -1,6 +1,7 @@
 import { Box, CssBaseline } from "@mui/material";
 import { makeStyles } from "tss-react/mui";
 import NavBar from "./navbar";
+import Header from "./header";
 //@ts-ignore
 const useStyles = makeStyles(() => ({
     root: {
@@ -18,6 +19,7 @@ const Layout: React.FC = ({ children }) => {
         <Box className={classes.root}>
             <CssBaseline />
             <NavBar />
+            <Header />
             {children}
         </Box>
     )
