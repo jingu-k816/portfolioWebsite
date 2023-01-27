@@ -2,16 +2,17 @@ import { useRef, useEffect } from "react";
 import { styled } from "@mui/material";
 import theme from "@/theme";
 import Typed from "typed.js";
+import style from './header.module.css';
 
 const Root = styled("div")(({
     maxWidth: "100%",
-    height: "75vh",
+    height: "85vh",
     backgroundColor: theme.palette.primary.dark,
     color: theme.palette.secondary.main,
-    paddingTop: "32.5vh",
+    paddingTop: "42.5vh",
     fontSize: "40px",
     fontFamily: "Special Elite",
-    textAlign: "center"
+    textAlign: "center",
 }));
 
 const Header: React.FC = ({ }) => {
@@ -23,7 +24,7 @@ const Header: React.FC = ({ }) => {
     useEffect(() => {
         const options = {
             strings: [
-                "crafting efficient solutions."
+                "A Chef turned Software Developer, crafting efficient solutions."
             ],
             typeSpeed: 50,
         }
@@ -38,7 +39,14 @@ const Header: React.FC = ({ }) => {
     }, [])
     return (
         <Root>
-            A Chef turned Software Developer, <span ref={el} />
+            <div className={style.stars}></div>
+            <div className={style.twinkling}></div>
+            <div className={style.clouds}></div>
+            <span style={{
+                display: "block",
+                position: "relative",
+                zIndex: 3
+            }} ref={el} />
         </Root>
     );
 }
