@@ -1,4 +1,4 @@
-import { Layout, Header } from "@/components"
+import { Layout, Header, Project } from "@/components"
 import { styled, ThemeProvider } from "@mui/material";
 import theme from "@/theme";
 
@@ -12,6 +12,7 @@ export default function Home() {
       <ThemeProvider theme={theme}>
         <Layout>
           <Header />
+          <Project />
         </Layout>
       </ThemeProvider>
     </Root>
