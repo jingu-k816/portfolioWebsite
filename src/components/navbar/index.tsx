@@ -2,6 +2,7 @@ import { AppBar, Toolbar, Typography, CssBaseline, useScrollTrigger, Box, Contai
 import { cloneElement } from 'react';
 import Image from 'next/image';
 import imageLogo from "../../../public/assets/logo.png";
+import Link from 'next/link';
 
 
 interface NavBarProps {
@@ -35,13 +36,27 @@ const NavBar: React.FC = (props: NavBarProps) => {
                             <Image src={imageLogo} width={80} height={80} alt="Logo" />
                         </Container>
                         <Container sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-                            {menuItems.map((item) =>
-                                <Button
-                                    key={item}
-                                    sx={{ color: '#ffffff' }}
-                                >
-                                    {item}
-                                </Button>
+                            {menuItems.map((item) => {
+                                const menuHref = `#${item.toLowerCase()}`
+                                return (
+                                    <Button
+                                        key={item}
+                                        sx={{ color: '#ffffff' }}
+                                    >
+                                        <Link
+                                            style={{
+                                                textDecoration: "none",
+                                                color: '#ffffff'
+                                            }}
+                                            href={menuHref}
+                                            scroll={false}
+                                        >
+                                            {item}
+                                        </Link>
+                                    </Button>
+                                )
+                            }
+
                             )}
                         </Container>
                     </Toolbar>

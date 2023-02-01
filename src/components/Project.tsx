@@ -39,7 +39,7 @@ const Project: React.FC = ({ }) => {
     const pizzatentLink = "https://github.com/jkang95/PizzaTentFoodPickUpApp"
 
     return (
-        <Root>
+        <Root id="portfolio">
             Portfolio
             <DescriptionWrapper>(Click the image to go to Github Repository of the portfolio)</DescriptionWrapper>
             <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
