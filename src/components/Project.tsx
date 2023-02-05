@@ -3,10 +3,10 @@ import theme from "@/theme";
 import Image from "next/image";
 
 // import pictures
-import bookifyPic from "../../public/assets/bookify_project.gif"
-import weatherCheckerPic from "../../public/assets/weatherChecker_project.gif"
-import schedulerPic from "../../public/assets/scheduler_project.png"
-import pizzaTentPic from "../../public/assets/pizzatent_project.png"
+import bookifyPic from "@/../public/assets/bookify_project.gif"
+import weatherCheckerPic from "@/../public/assets/weatherChecker_project.gif"
+import schedulerPic from "@/../public/assets/scheduler_project.png"
+import pizzaTentPic from "@/../public/assets/pizzatent_project.png"
 
 const Root = styled("div")(({
     maxWidth: "100%",
@@ -14,7 +14,8 @@ const Root = styled("div")(({
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.whites.main,
     paddingTop: "15vh",
-    fontSize: "40px",
+    paddingBottom: "5vh",
+    fontSize: "2.5em",
     textAlign: "center",
 }));
 
@@ -24,13 +25,13 @@ const ProjectWrapper = styled("div")(({
     backgroundColor: theme.palette.primary.main,
     paddingTop: "5vh",
     color: theme.palette.whites.dark,
-    fontSize: "25px"
+    fontSize: "1em"
 }))
 
 const DescriptionWrapper = styled("div")(({
     margin: "2% 20%",
     textAlign: "center",
-    fontSize: "15px",
+    fontSize: "0.4em",
 }))
 const Project: React.FC = ({ }) => {
     const bookifyLink = "https://github.com/jkang95/Bookify"
