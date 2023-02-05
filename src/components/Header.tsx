@@ -8,7 +8,7 @@ const Root = styled("div")(({
     maxWidth: "100%",
     height: "85vh",
     backgroundColor: theme.palette.primary.dark,
-    color: theme.palette.secondary.main,
+    color: theme.palette.whites.main,
     paddingTop: "42.5vh",
     fontSize: "40px",
     fontFamily: "Special Elite",
