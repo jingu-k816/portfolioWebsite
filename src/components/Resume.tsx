@@ -1,4 +1,4 @@
-import { styled } from "@mui/material";
+import { Link, styled } from "@mui/material";
 import Image from "next/image";
 import theme from "@/theme";
 
@@ -32,15 +32,18 @@ const ImageWrapper = styled("div")(({
 }));
 
 const Resume: React.FC = () => {
+    const resumeLink: string = "https://resume.creddle.io/resume/hx8feitrwwa"
     return (
         <Root id="resume">
             Resume
-            <DescriptionWrapper>(Click the image to download)</DescriptionWrapper>
+            <DescriptionWrapper>(Click the image to view enlarged resume)</DescriptionWrapper>
             <ImageWrapper>
-                <Image
-                    src={resumePic}
-                    alt="resume photo"
-                />
+                <Link href={resumeLink} target="_blank" rel="noopener">
+                    <Image
+                        src={resumePic}
+                        alt="resume photo"
+                    />
+                </Link>
             </ImageWrapper>
 
         </Root>
