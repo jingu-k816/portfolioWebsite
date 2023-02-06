@@ -33,7 +33,7 @@ const ImageWrapper = styled("div")(({
 
 const Resume: React.FC = () => {
     return (
-        <Root>
+        <Root id="resume">
             Resume
             <DescriptionWrapper>(Click the image to download)</DescriptionWrapper>
             <ImageWrapper>
