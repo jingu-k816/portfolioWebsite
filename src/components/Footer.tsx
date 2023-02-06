@@ -3,7 +3,6 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MailIcon from '@mui/icons-material/Mail';
 
-import { Constants } from "@/constants";
 import theme from "@/theme";
 
 const Root = styled("div")(({
@@ -28,11 +27,14 @@ const LinkSymbolWrapper = styled("div")(({
     marginRight: "5vh",
     opacity: "0.8",
 }))
+
 const Footer: React.FC = () => {
     const linkItems = ["github", "linkedin", "email"];
+
     const githubLink = "https://github.com/jkang95"
     const linkedInLink = "https://www.linkedin.com/in/jingukang"
     const emailLink = "mailto:jinguk0816@gmail.com"
+
     return (
         <Root>
             <CopyRightWrapper>
