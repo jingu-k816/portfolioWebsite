@@ -1,9 +1,12 @@
-import { Link, styled } from "@mui/material";
+import { Link, styled, Button } from "@mui/material";
 import Image from "next/image";
 import theme from "@/theme";
 
+import { saveAs } from "file-saver";
+
 // import resume photo
 import resumePic from "@/../public/assets/resume.png"
+import resumeFile from "@/../public/assets/jkang_resume.pdf"
 
 const Root = styled("div")(({
     display: "flex",
@@ -23,6 +26,7 @@ const DescriptionWrapper = styled("div")(({
     margin: "2% 20%",
     textAlign: "center",
     fontSize: "0.4em",
+    color: theme.palette.whites.main,
 }))
 
 const ImageWrapper = styled("div")(({
@@ -32,20 +36,23 @@ const ImageWrapper = styled("div")(({
 }));
 
 const Resume: React.FC = () => {
-    const resumeLink: string = "https://resume.creddle.io/resume/hx8feitrwwa"
+    const handleDownload = () => {
+        saveAs(resumeFile, "jingu_kang_resume.pdf")
+    }
+
     return (
         <Root id="resume">
             Resume
-            <DescriptionWrapper>(Click the image to view enlarged resume)</DescriptionWrapper>
+            <DescriptionWrapper>
+                (Click the image to download the resume in PDF format)
+            </DescriptionWrapper>
             <ImageWrapper>
-                <Link href={resumeLink} target="_blank" rel="noopener">
-                    <Image
-                        src={resumePic}
-                        alt="resume photo"
-                    />
-                </Link>
+                <Image
+                    src={resumePic}
+                    alt="resume photo"
+                    onClick={handleDownload}
+                />
             </ImageWrapper>
-
         </Root>
     );
 }
