@@ -1,5 +1,7 @@
 import { Link, styled } from "@mui/material";
 import theme from "@/theme";
+
+
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
@@ -9,7 +11,8 @@ const Root = styled("div")(({
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.whites.main
 
-}))
+}));
+
 const HeaderWrapper = styled("span")(({
     paddingTop: "4em",
     display: "flex",
@@ -60,7 +63,20 @@ const Contact: React.FC = () => {
                             key={i}
                             sx={{ color: theme.palette.whites.dark, width: "10%" }}
                         >
-                            {link === "github" ? (<><GitHubIcon fontSize="large" /> <div style={{ marginLeft: "3em", fontSize: "1.2em", marginTop: "-2em" }}>Github</div></>) : (<><LinkedInIcon fontSize="large" /> <div style={{ marginLeft: "3em", fontSize: "1.2em", marginTop: "-2em" }}>LinkedIn</div></>)}
+                            {link === "github" ?
+                                (<>
+                                    <GitHubIcon fontSize="large" />
+                                    <div style={{ marginLeft: "3em", fontSize: "1.2em", marginTop: "-2em" }}>
+                                        Github
+                                    </div>
+                                </>) :
+                                (<>
+                                    <LinkedInIcon fontSize="large" />
+                                    <div style={{ marginLeft: "3em", fontSize: "1.2em", marginTop: "-2em" }}>
+                                        LinkedIn
+                                    </div>
+                                </>)
+                            }
                         </Link>
                     );
                 })}
