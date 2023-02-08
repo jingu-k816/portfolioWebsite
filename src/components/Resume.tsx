@@ -5,8 +5,8 @@ import theme from "@/theme";
 import { saveAs } from "file-saver";
 
 // import resume photo
-import resumePic from "@/../public/assets/resume.png"
-import resumeFile from "@/../public/assets/jkang_resume.pdf"
+import resumePic from "@/../public/assets/resume.png";
+import resumeFile from "@/../public/assets/jkang_resume.pdf";
 
 const Root = styled("div")(({
     display: "flex",
@@ -14,7 +14,7 @@ const Root = styled("div")(({
     justifyContent: "center",
     maxWidth: "100%",
     height: "100%",
-    backgroundColor: theme.palette.primary.gray,
+    backgroundColor: theme.palette.primary.light,
     paddingTop: "15vh",
     paddingBottom: "5vh",
     textAlign: "center",

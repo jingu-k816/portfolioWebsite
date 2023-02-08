@@ -3,7 +3,7 @@ import { styled, ThemeProvider } from "@mui/material";
 import theme from "@/theme";
 
 const Root = styled("main")(() => ({
-  backgroundColor: theme.palette.primary.gray
+  backgroundColor: theme.palette.primary.light
 }))
 
 export default function Home() {

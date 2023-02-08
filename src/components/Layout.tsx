@@ -1,3 +1,4 @@
+import { PropsWithChildren } from "react";
 import { Box, CssBaseline, styled } from "@mui/material";
 import NavBar from "./navbar";
 import Footer from "./Footer";
@@ -8,7 +9,7 @@ const Root = styled("div")(({ theme }) => ({
     minHeight: '100vh'
 }));
 
-const Layout: React.FC = ({ children }) => {
+const Layout: React.FC<PropsWithChildren> = ({ children }) => {
 
     return (
         <Root>
